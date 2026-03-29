@@ -6,84 +6,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./index.css" />
     <title>Khanh Chung</title>
-    <style>
-      html,
-      body {
-        height: 100%;
-        font-family: "Noto Sans", sans-serif;
-        font-optical-sizing: auto;
-      }
-
-      body {
-        margin: 0;
-        font-size: 1.2rem;
-        overflow: hidden;
-      }
-
-      .layout {
-        display: flex;
-        height: 100vh;
-        justify-content: center;
-      }
-
-      .sidebar {
-        width: 280px;
-        padding: 24px;
-        flex-shrink: 0;
-      }
-
-      .content {
-        flex: 1;
-        padding: 24px;
-        max-width: 1024px;
-        overflow-y: auto;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        scroll-behavior: smooth;
-      }
-
-      .content::-webkit-scrollbar {
-        display: none;
-      }
-
-      ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-      }
-
-      .content-footer {
-        text-align: center;
-      }
-
-      .back-to-top {
-        display: inline-block;
-      }
-
-      blockquote {
-        margin-right: 8px;
-      }
-
-      blockquote p::before {
-        content: "\201C";
-      }
-
-      blockquote p::after {
-        content: "\201D";
-      }
-
-      .blockquote {
-        display: flex;
-        align-items: center;
-        background-color: #ededed;
-        border-radius: 4px;
-      }
-    </style>
   </head>
+
   <body>
     <div class="layout">
       <aside class="sidebar">
@@ -97,7 +26,6 @@
             MS Software Engineering student at
             <em>San Jose State University</em>
           </p>
-
           <p>
             BS Software Engineering student at
             <em>San Jose State University</em>
@@ -110,6 +38,7 @@
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -122,22 +51,22 @@
           <h2>About Me</h2>
           <p>
             I am a Frontend Engineer Intern at TikTok and a Software Engineering
-            student at San Jose State University. I have a passion with
-            computers and spend a great time learning them in deep.
+            student at San Jose State University. I am passionate about
+            computers and enjoy learning how they work at a deeper level.
           </p>
 
           <p>
-            If you wonder why a frontend developer created such a plain
-            portfolio. My answer is:
+            If you are wondering why a frontend developer built such a plain
+            portfolio, my answer is:
             <strong><em>Right tool for the right job</em></strong
-            >. React or other frameworks are great tools to build complicated
-            web apps but for a simple portfolio, there is no need to make my
-            life more difficult.
+            >. React and other frameworks are great tools for building complex
+            web applications, but for a simple portfolio, there is no need to
+            make life more difficult.
           </p>
 
           <p>
-            Currently, I am teaching myself CS using top university (Stanford,
-            CMU, Berkeley, etc) courses such as CS 61B, CMU 15-213, etc.
+            I am currently teaching myself computer science through courses from
+            Stanford, CMU, and Berkeley, including CS 61B and CMU 15-213.
           </p>
 
           <div class="blockquote">
@@ -146,12 +75,7 @@
             >
               <p>What I cannot create, I do not understand.</p>
             </blockquote>
-            <p>
-              —
-              <strong>
-                <em>Richard P. Feynman</em>
-              </strong>
-            </p>
+            <p>— <cite>Richard P. Feynman</cite></p>
           </div>
         </section>
 
@@ -180,63 +104,80 @@
 
         <hr />
 
+        <section id="skills">
+          <h2>Skills</h2>
+          <p>
+            <strong>Programming languages</strong>: C, C++, Java, JavaScript,
+            TypeScript, Python
+          </p>
+          <p>
+            <strong>Technologies</strong>: React.js, Express, Node.js, Docker,
+            AWS, RabbitMQ, Git
+          </p>
+          <p><strong>Databases</strong>: PostgreSQL, MongoDB, Redis</p>
+        </section>
+
+        <hr />
+
         <section id="projects">
           <h2>Projects</h2>
 
           <article>
-            <h4>
-              <a href="https://fedbridge.app/" rel="noreferrer" target="_blank"
-                >FedBridge</a
-              >
-            </h4>
+            <h3>
+              <a href="https://fedbridge.app/" target="_blank" rel="noreferrer">
+                FedBridge
+              </a>
+            </h3>
             <ul>
               <li>
-                An AI-powered job-matching platform for laid-off federal workers
-                during Feb 2025.
+                AI-powered job-matching platform for laid-off federal workers
+                during February 2025.
               </li>
               <li>
                 Received strong faculty recognition for the project’s technical
-                quality and design by SJSU professor.
+                quality and design by an SJSU professor.
               </li>
-              <li>Received a referral from SJSU professor to IBM.</li>
+              <li>Received a professor referral to IBM.</li>
               <li>
                 Featured by
                 <a
                   href="https://www.cbsnews.com/sanfrancisco/news/san-jose-university-students-fedbridge-ai-app/"
-                  rel="noreferrer"
                   target="_blank"
-                  >CBS News</a
+                  rel="noreferrer"
+                >
+                  CBS News </a
                 >.
               </li>
             </ul>
           </article>
 
           <article>
-            <h4>
+            <h3>
               <a
                 href="https://github.com/craftzmask/smart-car-cloud-services"
-                rel="noreferrer"
                 target="_blank"
-                >Smart Car Service Platforms</a
+                rel="noreferrer"
               >
-            </h4>
+                Smart Car Service Platform
+              </a>
+            </h3>
             <ul>
               <li>
-                Built a cloud-native IoT platform (AWS) in a 4-member team for
+                Built a cloud-native IoT platform on AWS in a 4-member team for
                 autonomous smart cars, supporting real-time audio-based
                 surveillance and alerting.
               </li>
               <li>
-                Implemented a responsive dashboard using React.js for monitoring
+                Implemented a responsive dashboard using React.js to monitor
                 connected vehicles and IoT devices.
               </li>
               <li>
-                RabbitMQ to enable asynchronous alert processing, improving
+                Used RabbitMQ for asynchronous alert processing to improve
                 throughput and reliability.
               </li>
               <li>
                 Received strong faculty recognition for the project’s technical
-                quality and design by SJSU professor.
+                quality and design by an SJSU professor.
               </li>
             </ul>
           </article>
@@ -248,7 +189,7 @@
           <h2>Education</h2>
 
           <article>
-            <h4>San José State University</h4>
+            <h3>San José State University</h3>
             <ul>
               <li>
                 <em>MS Software Engineering</em> (Distributed Systems, Cloud
@@ -256,8 +197,9 @@
               </li>
             </ul>
           </article>
+
           <article>
-            <h4>San José State University</h4>
+            <h3>San José State University</h3>
             <ul>
               <li>
                 <em>BS Software Engineering</em> (Full Stack and Mobile
@@ -275,17 +217,19 @@
             Reach out through
             <a
               href="https://www.linkedin.com/in/khanh-d-chung/"
-              rel="noreferrer"
               target="_blank"
-              >LinkedIn</a
+              rel="noreferrer"
             >
+              LinkedIn
+            </a>
             or my
             <a
               href="https://github.com/craftzmask"
-              rel="noreferrer"
               target="_blank"
-              >Github</a
+              rel="noreferrer"
             >
+              GitHub </a
+            >.
           </p>
         </section>
       </main>
