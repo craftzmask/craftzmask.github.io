@@ -3,32 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khanh Chung | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Khanh Chung</title>
     <style>
-      html {
-        scroll-behavior: smooth;
+      html,
+      body {
+        height: 100%;
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
       }
 
       body {
         margin: 0;
         font-size: 1.2rem;
+        overflow: hidden;
       }
 
       .layout {
         display: flex;
-        min-height: 100vh;
+        height: 100vh;
         justify-content: center;
       }
 
       .sidebar {
         width: 280px;
         padding: 24px;
+        flex-shrink: 0;
       }
 
       .content {
         flex: 1;
         padding: 24px;
         max-width: 1024px;
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
+      }
+
+      .content::-webkit-scrollbar {
+        display: none;
       }
 
       ul {
@@ -61,16 +80,16 @@
         display: flex;
         align-items: center;
         background-color: #ededed;
+        border-radius: 4px;
       }
     </style>
   </head>
   <body>
-    <div class="layout" id="top">
+    <div class="layout">
       <aside class="sidebar">
         <header>
           <h1>Khanh Chung</h1>
           <p>Frontend Engineer Intern at <em>TikTok</em></p>
-          <p>Ex-Software Engineer Intern at <em>Softlogi</em></p>
 
           <hr />
 
@@ -110,9 +129,10 @@
           <p>
             If you wonder why a frontend developer created such a plain
             portfolio. My answer is:
-            <strong>Right tool for the right job</strong>. React or other
-            frameworks are great tools to build complicated web apps but for a
-            simple portfolio, there is no need to make my life more difficult.
+            <strong><em>Right tool for the right job</em></strong
+            >. React or other frameworks are great tools to build complicated
+            web apps but for a simple portfolio, there is no need to make my
+            life more difficult.
           </p>
 
           <p>
@@ -126,7 +146,12 @@
             >
               <p>What I cannot create, I do not understand.</p>
             </blockquote>
-            <p>— <em>Richard P. Feynman</em></p>
+            <p>
+              —
+              <strong>
+                <em>Richard P. Feynman</em>
+              </strong>
+            </p>
           </div>
         </section>
 
@@ -215,23 +240,6 @@
               </li>
             </ul>
           </article>
-
-          <article>
-            <h4>
-              <a
-                href="https://github.com/craftzmask/Gitlet"
-                rel="noreferrer"
-                target="_blank"
-                >Gitlet</a
-              >
-            </h4>
-            <ul>
-              <li>
-                A version-control system that mimics some of the basic features of the popular system Git. This is one of projects in CS 61B (Data Structures) at UC Berkeley.
-              </li>
-              <li>Designed my own implementation and build it from scratch supporting init, add, commit, branch, merge</li>
-            </ul>
-          </article>
         </section>
 
         <hr />
@@ -280,10 +288,6 @@
             >
           </p>
         </section>
-
-        <footer class="content-footer">
-          <a href="#top" class="back-to-top">Back to top</a>
-        </footer>
       </main>
     </div>
   </body>
