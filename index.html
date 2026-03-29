@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khanh Chung | Portfolio</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .layout {
+        display: flex;
+        min-height: 100vh;
+        justify-content: center;
+      }
+
+      .sidebar {
+        width: 280px;
+        padding: 24px;
+      }
+
+      .content {
+        flex: 1;
+        padding: 24px;
+        max-width: 1024px;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .content-footer {
+        text-align: center;
+      }
+
+      .back-to-top {
+        display: inline-block;
+      }
+
+      blockquote {
+        margin-right: 8px;
+      }
+
+      blockquote p::before {
+        content: "\201C";
+      }
+
+      blockquote p::after {
+        content: "\201D";
+      }
+
+      .blockquote {
+        display: flex;
+        align-items: center;
+        background-color: #ededed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout" id="top">
+      <aside class="sidebar">
+        <header>
+          <h1>Khanh Chung</h1>
+          <p>Frontend Engineer Intern at <em>TikTok</em></p>
+          <p>Ex-Software Engineer Intern at <em>Softlogi</em></p>
+
+          <hr />
+
+          <p>
+            MS Software Engineering student at
+            <em>San Jose State University</em>
+          </p>
+
+          <p>
+            BS Software Engineering student at
+            <em>San Jose State University</em>
+          </p>
+        </header>
+
+        <hr />
+
+        <nav aria-label="Portfolio navigation">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <section id="about">
+          <h2>About Me</h2>
+          <p>
+            I am a Frontend Engineer Intern at TikTok and a Software Engineering
+            student at San Jose State University. I have a passion with
+            computers and spend a great time learning them in deep.
+          </p>
+
+          <p>
+            If you wonder why a frontend developer created such a plain
+            portfolio. My answer is:
+            <strong>Right tool for the right job</strong>. React or other
+            frameworks are great tools to build complicated web apps but for a
+            simple portfolio, there is no need to make my life more difficult.
+          </p>
+
+          <p>
+            Currently, I am teaching myself CS using top university (Stanford,
+            CMU, Berkeley, etc) courses such as CS 61B, CMU 15-213, etc.
+          </p>
+
+          <div class="blockquote">
+            <blockquote
+              cite="https://www.goodreads.com/quotes/8414-what-i-cannot-create-i-do-not-understand"
+            >
+              <p>What I cannot create, I do not understand.</p>
+            </blockquote>
+            <p>— <em>Richard P. Feynman</em></p>
+          </div>
+        </section>
+
+        <hr />
+
+        <section id="experience">
+          <h2>Experience</h2>
+
+          <article>
+            <h3>Frontend Engineer Intern @ TikTok</h3>
+            <p>San Jose, CA | <em>Dec 2025 - Present</em></p>
+            <ul>
+              <li><em>Creator Search Insights Platform Team</em></li>
+              <li><em>Search Ecology Platform Team</em></li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Software Engineer Intern @ Softlogi</h3>
+            <p>San Jose, CA | <em>Jun 2025 - Oct 2025</em></p>
+            <ul>
+              <li><em>Credentialing System Process Team</em></li>
+            </ul>
+          </article>
+        </section>
+
+        <hr />
+
+        <section id="projects">
+          <h2>Projects</h2>
+
+          <article>
+            <h4>
+              <a href="https://fedbridge.app/" rel="noreferrer" target="_blank"
+                >FedBridge</a
+              >
+            </h4>
+            <ul>
+              <li>
+                An AI-powered job-matching platform for laid-off federal workers
+                during Feb 2025.
+              </li>
+              <li>
+                Received strong faculty recognition for the project’s technical
+                quality and design by SJSU professor.
+              </li>
+              <li>Received a referral from SJSU professor to IBM.</li>
+              <li>
+                Featured by
+                <a
+                  href="https://www.cbsnews.com/sanfrancisco/news/san-jose-university-students-fedbridge-ai-app/"
+                  rel="noreferrer"
+                  target="_blank"
+                  >CBS News</a
+                >.
+              </li>
+            </ul>
+          </article>
+
+          <article>
+            <h4>
+              <a
+                href="https://github.com/craftzmask/smart-car-cloud-services"
+                rel="noreferrer"
+                target="_blank"
+                >Smart Car Service Platforms</a
+              >
+            </h4>
+            <ul>
+              <li>
+                Built a cloud-native IoT platform (AWS) in a 4-member team for
+                autonomous smart cars, supporting real-time audio-based
+                surveillance and alerting.
+              </li>
+              <li>
+                Implemented a responsive dashboard using React.js for monitoring
+                connected vehicles and IoT devices.
+              </li>
+              <li>
+                RabbitMQ to enable asynchronous alert processing, improving
+                throughput and reliability.
+              </li>
+              <li>
+                Received strong faculty recognition for the project’s technical
+                quality and design by SJSU professor.
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <hr />
+
+        <section id="education">
+          <h2>Education</h2>
+
+          <article>
+            <h4>San José State University</h4>
+            <ul>
+              <li>
+                <em>MS Software Engineering</em> (Distributed Systems, Cloud
+                Computing and Virtualization)
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h4>San José State University</h4>
+            <ul>
+              <li>
+                <em>BS Software Engineering</em> (Full Stack and Mobile
+                Development)
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <hr />
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>
+            Reach out through
+            <a
+              href="https://www.linkedin.com/in/khanh-d-chung/"
+              rel="noreferrer"
+              target="_blank"
+              >LinkedIn</a
+            >
+            or my
+            <a
+              href="https://github.com/craftzmask"
+              rel="noreferrer"
+              target="_blank"
+              >Github</a
+            >
+          </p>
+        </section>
+
+        <footer class="content-footer">
+          <a href="#top" class="back-to-top">Back to top</a>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
