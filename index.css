@@ -1,3 +1,29 @@
+:root {
+  --wada-indigo: #1D1E24;       /* Deep Indigo (Kon-iro) */
+  --wada-green: #53764E;        /* Green (Midori-iro) */
+  --wada-yellow: #F3E7B8;       /* Pale Lemon Yellow (Usutamago-iro) */
+  --wada-peach: #E25B28;        /* Peach Red (Anzu-iro) */
+  --wada-nile: #C6DCE2;         /* Nile Blue (Mizu-iro) */
+
+  /* 1. Wada Light (Lemon Canvas) Mapping */
+  --bg-color: var(--wada-yellow);
+  --text-color: var(--wada-indigo);
+  --muted-text: rgba(29, 30, 36, 0.75);
+  --link-color: var(--wada-peach);
+  --link-underline: rgba(226, 91, 40, 0.45);
+  --visited-color: var(--wada-green);
+  --visited-underline: rgba(83, 118, 78, 0.45);
+  --quote-bg: var(--wada-green);
+  --quote-text: var(--wada-yellow);
+  --hr-color: rgba(29, 30, 36, 0.15);
+
+  /* 3. Refined Editorial Surface Tokens */
+  --card-bg: rgba(255, 255, 255, 0.34);
+  --card-border: rgba(29, 30, 36, 0.12);
+  --badge-bg: var(--wada-nile);
+  --badge-text: var(--wada-indigo);
+}
+
 html,
 body {
   height: 100%;
@@ -9,14 +35,61 @@ body {
   font-family: "Noto Sans", sans-serif;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #111;
-  background-color: #fff;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. LINK HOVER STYLE: Bold Underline Shift (LVHA Cascade Fixed)
+   ========================================================================== */
+a {
+  width: 100%;
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  transition:
+    color 0.18s ease,
+    text-decoration-color 0.18s ease,
+    text-underline-offset 0.18s ease,
+    text-decoration-thickness 0.18s ease;
+}
+
+a:link {
+  color: var(--link-color);
+}
+
+a:visited {
+  color: var(--wada-peach);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--wada-peach);
+  background-color: transparent;
+  text-decoration-color: var(--wada-indigo);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+}
+
+a:active {
+  opacity: 0.8;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--hr-color);
+  margin: 20px 0;
 }
 
 .layout {
@@ -28,15 +101,51 @@ body {
 
 .sidebar {
   width: 280px;
-  padding: 16px;
+  padding: 28px 24px;
   flex-shrink: 0;
+  border-right: 1px solid var(--hr-color);
+}
+
+.sidebar header h1 {
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.sidebar nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar nav a:link,
+.sidebar nav a:visited {
+  display: inline-block;
+  padding: 4px 10px;
+  margin-left: -10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a:focus-visible {
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  text-decoration: none;
+  transform: translateX(4px);
+  border-left: 4px solid var(--wada-green);
 }
 
 .content {
   flex: 1;
   max-width: 900px;
   justify-content: center;
-  padding: 16px;
+  padding: 32px 36px;
   overflow-y: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -45,13 +154,6 @@ body {
 
 .content::-webkit-scrollbar {
   display: none;
-}
-
-.sidebar nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding-left: 20px;
 }
 
 h1,
@@ -64,18 +166,42 @@ blockquote {
   margin-top: 0;
 }
 
-strong {
-  font-weight: 700;
+/* Nile Blue Section Header Pills */
+section h2 {
+  display: inline-block;
+  color: var(--badge-text);
+  padding: 3px 12px;
+  font-size: 1.2rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 18px;
+  border-left: 4px solid var(--wada-peach);
 }
 
-em {
-  font-style: italic;
+/* Editorial Card Surfaces for Experience, Projects & Education */
+article {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 16px 20px;
 }
 
 article + article {
-  margin-top: 24px;
+  margin-top: 18px;
 }
 
+.article-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+ul {
+  padding-left: 22px;
+  margin-bottom: 0;
+}
+
+/* Richard Feynman Blockquote */
 blockquote {
   margin: 0;
 }
@@ -91,15 +217,29 @@ blockquote p::after {
 .blockquote {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 16px;
-  background-color: #ededed;
-  border-radius: 4px;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  background-color: var(--quote-bg);
+  color: var(--quote-text);
+  border-left: 5px solid var(--wada-peach);
+  box-shadow: 0 4px 14px rgba(29, 30, 36, 0.08);
+}
+
+.blockquote-quote {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.blockquote-avatar {
+  flex-shrink: 0;
 }
 
 blockquote p,
 .blockquote p {
   margin: 0;
+  font-style: italic;
 }
 
 cite {
@@ -111,6 +251,7 @@ cite {
   text-align: center;
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
   body {
     overflow: auto;
@@ -124,27 +265,22 @@ cite {
   }
 
   .sidebar {
-    width: auto;
-    padding: 20px;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--hr-color);
   }
 
   .content {
-    max-width: none;
     padding: 20px;
     overflow-y: visible;
   }
 
   .sidebar nav ul {
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    padding-left: 0;
+    gap: 1rem;
     list-style: none;
-  }
-
-  p,
-  li {
-    max-width: none;
   }
 
   .blockquote {
